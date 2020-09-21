@@ -15,17 +15,17 @@ xmlns:bs="clr-namespace:Plugin.BottomSheet;assembly=Plugin.BottomSheet"
 - Then place **BottomSheetLayout** at the root of your Page
 
 ```xml
-<bottomsheet:BottomSheetLayout>
+<bs:BottomSheetLayout>
     <StackLayout>
         <Label Text="Your Page Content here..."/>
     </StackLayout>
 
-    <bottomsheet:BottomSheetLayout.BottomSheetContent>
+    <bs:BottomSheetLayout.BottomSheetContent>
         <StackLayout BackgroundColor="WhiteSmoke">
              <Label Text="Your BottomPage Content here..."/>
         </StackLayout>
-    </bottomsheet:BottomSheetLayout.BottomSheetContent>
-</bottomsheet:BottomSheetLayout>
+    </bs:BottomSheetLayout.BottomSheetContent>
+</bs:BottomSheetLayout>
 ```
 
 # Showcase
