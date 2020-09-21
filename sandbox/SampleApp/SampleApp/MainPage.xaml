@@ -1,16 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:bottomsheet="clr-namespace:Plugin.BottomSheet;assembly=Plugin.BottomSheet"
+             Background="LightGray"
              x:Class="SampleApp.MainPage">
-    <RelativeLayout>
-        
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
+
+    <bottomsheet:BottomSheetLayout>
+
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
+            <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
+            <Label FontSize="16" Padding="30,24,30,0">
                 <Label.FormattedText>
                     <FormattedString>
                         <FormattedString.Spans>
@@ -20,32 +23,23 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Button Text="Reset mi?" Clicked="Button_Clicked" />
-            <Button Text="En Yukarı" Clicked="Button_ToTop_Clicked" />
         </StackLayout>
 
-        <Frame x:Name="bottomSheet" HasShadow="true" CornerRadius="8" Padding="1,4,1,0" BackgroundColor="#faf9f8" 
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.9,Constant=0}"
-                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
-                RelativeLayout.HeightConstraint="{ConstraintExpression
-                 Type=RelativeToParent,Property=Height,Factor=1,Constant=0}">
-            <Frame.GestureRecognizers>
-                <PanGestureRecognizer PanUpdated="OnPanUpdated" />
-            </Frame.GestureRecognizers>
-            <StackLayout>
-                <BoxView HeightRequest="5" CornerRadius="2" WidthRequest="50" BackgroundColor="Gray" HorizontalOptions="Center"/>
-                <Label Text="Lorem ipsum dolor sit amet" />
-                <BoxView Color="Yellow" Margin="50"></BoxView>
-                <BoxView Color="Yellow" Margin="50"></BoxView>
-                <BoxView Color="Yellow" Margin="50"></BoxView>
-                <BoxView Color="Yellow" Margin="50"></BoxView>
-                <BoxView Color="Yellow" Margin="50"></BoxView>
-                <BoxView Color="Yellow" Margin="50"></BoxView>
-                <BoxView Color="Yellow" Margin="50"></BoxView>
-                <BoxView Color="Yellow" Margin="50"></BoxView>
-                <BoxView Color="Yellow" Margin="50"></BoxView>
-            </StackLayout>
-        </Frame>
-    </RelativeLayout>
+        <bottomsheet:BottomSheetLayout.BottomSheetContent>
+            <ScrollView>
 
+                <StackLayout>
+                    <Label Margin="20,30" HorizontalTextAlignment="Center" TextColor="Black">
+                        <Label.Text>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur aliquam turpis sit amet tempor. Sed id magna ac mi volutpat fermentum. Duis volutpat ante at nulla auctor, vel facilisis ligula tincidunt. Suspendisse sit amet mauris sed mi consectetur tempor et sed orci. Nam vel gravida felis. Etiam finibus, quam id venenatis tincidunt, nulla ante luctus orci, non finibus turpis sapien ac magna. Mauris ac eleifend nunc. Etiam tincidunt, sapien sed hendrerit placerat, elit leo posuere lectus, non tristique dui ante id mi. Proin augue dolor, fermentum ultricies quam nec, consequat faucibus risus. Vivamus eu nunc ipsum. Vestibulum sed risus nisl.
+
+                            Cras efficitur purus vitae erat eleifend viverra. Suspendisse tempor ultrices dui, convallis dictum enim varius vel. Nullam dui dui, pharetra ac ante vel, auctor facilisis risus. Proin pretium faucibus velit, sed varius odio rhoncus at. Pellentesque at euismod lorem. Morbi pellentesque massa id turpis euismod posuere. Etiam finibus in sem nec placerat. Fusce consequat vulputate rhoncus. Maecenas eget augue sodales libero eleifend ornare. Etiam imperdiet eget purus at tincidunt. Donec fringilla pulvinar metus, eu vestibulum enim ultricies quis. Nam faucibus eu libero in fringilla.
+                        </Label.Text>
+                    </Label>
+                    <BoxView Color="Yellow" Margin="50"></BoxView>
+                    <BoxView Color="Black" Margin="50"></BoxView>
+                </StackLayout>
+            </ScrollView>
+        </bottomsheet:BottomSheetLayout.BottomSheetContent>
+    </bottomsheet:BottomSheetLayout>
 </ContentPage>

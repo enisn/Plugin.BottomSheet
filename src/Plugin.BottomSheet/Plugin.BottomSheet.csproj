@@ -2,6 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>enisn</Authors>
+    <Company>enisn</Company>
+    <Description>Bottom Sheet implementation for Xamarin Forms</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/enisn/Plugin.BottomSheet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/enisn/Plugin.BottomSheet</RepositoryUrl>
+    <PackageTags>Xamarin, Xamarin Forms, Bottom, Bottom Sheet, Bottom Page</PackageTags>
+    <PackageReleaseNotes>Relased</PackageReleaseNotes>
+    <NeutralLanguage />
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1451" />
+  </ItemGroup>
 
 </Project>
