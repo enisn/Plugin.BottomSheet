@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleApp.MainPage">
+    <RelativeLayout>
+        
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
+        <Label FontSize="16" Padding="30,24,30,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Learn more at "/>
+                            <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Button Text="Reset mi?" Clicked="Button_Clicked" />
+            <Button Text="En Yukarı" Clicked="Button_ToTop_Clicked" />
+        </StackLayout>
+
+        <Frame x:Name="bottomSheet" HasShadow="true" CornerRadius="8" Padding="1,4,1,0" BackgroundColor="#faf9f8" 
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.9,Constant=0}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression
+                 Type=RelativeToParent,Property=Height,Factor=1,Constant=0}">
+            <Frame.GestureRecognizers>
+                <PanGestureRecognizer PanUpdated="OnPanUpdated" />
+            </Frame.GestureRecognizers>
+            <StackLayout>
+                <BoxView HeightRequest="5" CornerRadius="2" WidthRequest="50" BackgroundColor="Gray" HorizontalOptions="Center"/>
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <BoxView Color="Yellow" Margin="50"></BoxView>
+                <BoxView Color="Yellow" Margin="50"></BoxView>
+                <BoxView Color="Yellow" Margin="50"></BoxView>
+                <BoxView Color="Yellow" Margin="50"></BoxView>
+                <BoxView Color="Yellow" Margin="50"></BoxView>
+                <BoxView Color="Yellow" Margin="50"></BoxView>
+                <BoxView Color="Yellow" Margin="50"></BoxView>
+                <BoxView Color="Yellow" Margin="50"></BoxView>
+                <BoxView Color="Yellow" Margin="50"></BoxView>
+            </StackLayout>
+        </Frame>
+    </RelativeLayout>
+
+</ContentPage>
